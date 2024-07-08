@@ -35,8 +35,6 @@ def generate_soundex(name):
         if len(soundex) > 4:
             soundex = soundex[:4]
  
-    # Start with the first letter (capitalized)
- 
     # Pad with zeros if necessary
     soundex = soundex.ljust(4, '0')
  
