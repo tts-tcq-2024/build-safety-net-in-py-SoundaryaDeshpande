@@ -35,21 +35,7 @@ def generate_soundex(name):
         soundex = soundex + num_map(name,prev_code)
         if len(soundex) > 4:
             soundex = soundex[:4]
-        
-
-    # Start with the first letter (capitalized)
-    '''
-    soundex = name[0].upper()
-    prev_code = get_soundex_code(soundex)
-
-    for char in name[1:]:
-        code = get_soundex_code(char)
-        if code != '0' and code != prev_code:
-            soundex += code
-            prev_code = code
-        if len(soundex) == 4:
-            break
-    '''
+    
 
     # Pad with zeros if necessary
     soundex = soundex.ljust(4, '0')
